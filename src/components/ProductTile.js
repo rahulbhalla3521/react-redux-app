@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 const ProductTile = () => {
     const products = useSelector((state) => state.allProducts.products);
-    const renderList = products.map(({type, name, amount, image}, index) => {
+    const renderList = products.map(({ type, name, amount, image }, index) => {
         return (
             <div key={index + "_content"} className="four wide column">
                 <div className="ui link cards">
@@ -31,7 +31,7 @@ const ProductTile = () => {
     return (
         renderList
     )
-    
+
 };
 
 export default ProductTile;
